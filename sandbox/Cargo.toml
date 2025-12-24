@@ -1,0 +1,19 @@
+[package]
+name = "forloop-sandbox"
+version = "0.1.0"
+edition = "2021"
+authors = ["forloop contributors"]
+description = "Process sandboxing for forloop browser"
+license = "GPL-3.0"
+repository = "https://github.com/forloop-browser/forloop"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+log = "0.4"
+
+[dev-dependencies]
+# None
+
+[lib]
+name = "forloop_sandbox"
+path = "src/lib.rs"

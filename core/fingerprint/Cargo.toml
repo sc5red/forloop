@@ -1,0 +1,19 @@
+[package]
+name = "forloop-fingerprint"
+version = "0.1.0"
+edition = "2021"
+authors = ["forloop contributors"]
+description = "Fingerprinting defense module for forloop browser"
+license = "GPL-3.0"
+repository = "https://github.com/forloop-browser/forloop"
+
+[dependencies]
+rand = "0.8"
+rand_chacha = "0.3"
+
+[dev-dependencies]
+# None needed
+
+[lib]
+name = "forloop_fingerprint"
+path = "src/lib.rs"

@@ -1,0 +1,70 @@
+[workspace]
+resolver = "2"
+members = [
+    "core/fingerprint",
+    "core/config",
+    "core/ui",
+    "network",
+    "sandbox",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/forloop-browser/forloop"
+authors = ["forloop contributors"]
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Tor integration
+arti = "1"
+arti-client = "0.11"
+tor-rtcompat = "0.9"
+
+# HTTP client
+reqwest = { version = "0.11", default-features = false, features = ["rustls-tls", "socks"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Cryptography
+rand = "0.8"
+sha2 = "0.10"
+ed25519-dalek = "2"
+
+# Sandbox (Linux)
+seccompiler = "0.4"
+nix = { version = "0.27", features = ["process", "signal", "user"] }
+landlock = "0.3"
+
+# Error handling
+thiserror = "1"
+anyhow = "1"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[profile.release]
+# Optimize for size and security
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.release.build-override]
+opt-level = 0
+
+[profile.dev]
+# Fast debug builds
+opt-level = 0
+debug = true

@@ -1,0 +1,16 @@
+[package]
+name = "forloop-ui"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal privacy-focused browser UI for forloop"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/forloop-browser/forloop"
+
+[dependencies]
+tokio = { version = "1", features = ["sync"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+
+[features]
+default = []

@@ -1,0 +1,18 @@
+[package]
+name = "forloop-config"
+version = "0.1.0"
+edition = "2021"
+authors = ["forloop contributors"]
+description = "Configuration and CLI for forloop browser"
+license = "GPL-3.0"
+repository = "https://github.com/forloop-browser/forloop"
+
+[dependencies]
+# Minimal dependencies
+
+[dev-dependencies]
+# None
+
+[lib]
+name = "forloop_config"
+path = "src/lib.rs"

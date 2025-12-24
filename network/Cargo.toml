@@ -1,0 +1,26 @@
+[package]
+name = "forloop-network"
+version = "0.1.0"
+edition = "2021"
+authors = ["forloop contributors"]
+description = "Network anonymization layer for forloop browser"
+license = "GPL-3.0"
+repository = "https://github.com/forloop-browser/forloop"
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+thiserror = "1.0"
+log = "0.4"
+rand = "0.8"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[features]
+default = []
+# Enable additional logging for debugging (not for production)
+debug-logging = []
+
+[lib]
+name = "forloop_network"
+path = "src/lib.rs"
