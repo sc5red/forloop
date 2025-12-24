@@ -124,7 +124,7 @@ check_dependencies() {
     
     local missing=()
     
-    for cmd in clang-16 lld-16 python3 cargo rustc node npm; do
+    for cmd in clang-19 lld-19 python3 cargo rustc node npm; do
         if ! command -v "$cmd" &> /dev/null; then
             missing+=("$cmd")
         fi
