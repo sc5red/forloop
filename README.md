@@ -2,7 +2,7 @@
 
 **Motto: "Every request is the first."**
 
-A production-ready desktop web browser whose primary and non-negotiable guarantee is:
+A desktop web browser whose primary and non-negotiable guarantee is:
 **Websites receive absolutely zero identifying or persistent data.**
 
 ## Philosophy
@@ -37,3 +37,4 @@ cd build && ./build.sh --release
 ## License
 
 GPLv3 - See LICENSE file
+
